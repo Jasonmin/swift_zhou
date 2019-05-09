@@ -15,6 +15,8 @@
 		CFF7A5772283C13800A375BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5752283C13800A375BB /* LaunchScreen.storyboard */; };
 		CFF7A57A2283C13800A375BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A5792283C13800A375BB /* main.m */; };
 		CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A5842283CC1E00A375BB /* HomeViewController.swift */; };
+		CFF7A5872284235900A375BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A5862284235900A375BB /* TabBarController.swift */; };
+		CFF7A58A228423EF00A375BB /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A589228423EF00A375BB /* MeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CFF7A5792283C13800A375BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFF7A5832283CC1D00A375BB /* swift_zhou-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift_zhou-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFF7A5842283CC1E00A375BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CFF7A5862284235900A375BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CFF7A589228423EF00A375BB /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		EA26AD19C5B616CAF45B176F /* Pods-swift_zhou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.debug.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				CFF7A5822283CBD600A375BB /* Home */,
+				CFF7A588228423E000A375BB /* Me */,
+				CFF7A5862284235900A375BB /* TabBarController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				CFF7A5842283CC1E00A375BB /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		CFF7A588228423E000A375BB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7A589228423EF00A375BB /* MeViewController.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7A58A228423EF00A375BB /* MeViewController.swift in Sources */,
 				CFF7A56F2283C13600A375BB /* ViewController.m in Sources */,
 				CFF7A57A2283C13800A375BB /* main.m in Sources */,
 				CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */,
+				CFF7A5872284235900A375BB /* TabBarController.swift in Sources */,
 				CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

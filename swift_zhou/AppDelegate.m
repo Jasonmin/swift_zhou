@@ -7,17 +7,39 @@
 //
 
 #import "AppDelegate.h"
+#import "swift_zhou-Swift.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) TabBarController *tabbarVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self showLoginVC];
+    [self.window makeKeyAndVisible];
+    
+    [self registerNotify];
+    
     return YES;
+}
+
+- (void)showLoginVC {
+    ViewController *loginVC = [[ViewController alloc] init];
+    self.window.rootViewController = loginVC;
+}
+
+- (void)registerNotify {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotify:) name:@"kNotify_loginSuccess" object:nil];
+}
+
+- (void)handleNotify:(NSNotification*)notify {
+    self.window.rootViewController = self.tabbarVC;
 }
 
 
@@ -45,6 +67,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Setter
+- (TabBarController*)tabbarVC {
+    if (!_tabbarVC) {
+        _tabbarVC = [[TabBarController alloc]init];
+    }
+    return _tabbarVC;
 }
 
 

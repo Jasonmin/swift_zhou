@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.loginKey = @"";
     
     [self.view addSubview:self.contentView];
@@ -53,10 +55,11 @@
     
     NSString *key = [NSString stringWithFormat:@"%ld",(long)sender.tag];
     self.loginKey = [self.loginKey stringByAppendingString:key];
-//    NSLog(@"%@",self.loginKey);
     if ([self.loginKey isEqualToString:@"9527"]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotify_loginSuccess" object:nil];
+        }];
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
     }
