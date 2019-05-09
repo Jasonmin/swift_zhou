@@ -1,0 +1,14 @@
+
+platform :ios, '8.0'
+
+def all_Pods
+   pod 'CTMediator', '~> 25'
+end
+
+targetsArray = ['swift_zhou']
+
+targetsArray.each do |t|
+    target t do
+        all_Pods
+    end
+end

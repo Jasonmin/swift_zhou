@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9874FC0AF03161919A6329CE /* libPods-swift_zhou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */; };
 		CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56B2283C13600A375BB /* AppDelegate.m */; };
 		CFF7A56F2283C13600A375BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56E2283C13600A375BB /* ViewController.m */; };
 		CFF7A5722283C13600A375BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5702283C13600A375BB /* Main.storyboard */; };
 		CFF7A5742283C13800A375BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5732283C13800A375BB /* Assets.xcassets */; };
 		CFF7A5772283C13800A375BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5752283C13800A375BB /* LaunchScreen.storyboard */; };
 		CFF7A57A2283C13800A375BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A5792283C13800A375BB /* main.m */; };
+		CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A5842283CC1E00A375BB /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.release.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.release.xcconfig"; sourceTree = "<group>"; };
+		C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swift_zhou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A5672283C13600A375BB /* swift_zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_zhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A56A2283C13600A375BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFF7A56B2283C13600A375BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,9 @@
 		CFF7A5762283C13800A375BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF7A5782283C13800A375BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFF7A5792283C13800A375BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFF7A5832283CC1D00A375BB /* swift_zhou-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift_zhou-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFF7A5842283CC1E00A375BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EA26AD19C5B616CAF45B176F /* Pods-swift_zhou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.debug.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9874FC0AF03161919A6329CE /* libPods-swift_zhou.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DC66040D1C189F65C3AAC0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA26AD19C5B616CAF45B176F /* Pods-swift_zhou.debug.xcconfig */,
+				0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB5E98C216341F7E81B0D85A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFF7A55E2283C13600A375BB = {
 			isa = PBXGroup;
 			children = (
+				CFF7A5812283CBC200A375BB /* Modules */,
 				CFF7A5692283C13600A375BB /* swift_zhou */,
 				CFF7A5682283C13600A375BB /* Products */,
+				8DC66040D1C189F65C3AAC0F /* Pods */,
+				BB5E98C216341F7E81B0D85A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +86,7 @@
 		CFF7A5692283C13600A375BB /* swift_zhou */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7A5832283CC1D00A375BB /* swift_zhou-Bridging-Header.h */,
 				CFF7A56A2283C13600A375BB /* AppDelegate.h */,
 				CFF7A56B2283C13600A375BB /* AppDelegate.m */,
 				CFF7A56D2283C13600A375BB /* ViewController.h */,
@@ -71,6 +100,22 @@
 			path = swift_zhou;
 			sourceTree = "<group>";
 		};
+		CFF7A5812283CBC200A375BB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7A5822283CBD600A375BB /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CFF7A5822283CBD600A375BB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7A5842283CC1E00A375BB /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF7A57D2283C13800A375BB /* Build configuration list for PBXNativeTarget "swift_zhou" */;
 			buildPhases = (
+				63436C3F0C9F2A54BD5396FC /* [CP] Check Pods Manifest.lock */,
 				CFF7A5632283C13600A375BB /* Sources */,
 				CFF7A5642283C13600A375BB /* Frameworks */,
 				CFF7A5652283C13600A375BB /* Resources */,
@@ -102,6 +148,7 @@
 				TargetAttributes = {
 					CFF7A5662283C13600A375BB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -136,6 +183,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63436C3F0C9F2A54BD5396FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift_zhou-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFF7A5632283C13600A375BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +216,7 @@
 				CFF7A56F2283C13600A375BB /* ViewController.m in Sources */,
 				CFF7A57A2283C13800A375BB /* main.m in Sources */,
 				CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */,
+				CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +356,10 @@
 		};
 		CFF7A57E2283C13800A375BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA26AD19C5B616CAF45B176F /* Pods-swift_zhou.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swift_zhou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,14 +368,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhou.swift-zhou";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Modules/Home/swift_zhou-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		CFF7A57F2283C13800A375BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swift_zhou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +389,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhou.swift-zhou";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Modules/Home/swift_zhou-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
