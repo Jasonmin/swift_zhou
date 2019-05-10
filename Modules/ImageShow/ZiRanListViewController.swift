@@ -15,7 +15,7 @@ class ZiRanListViewController: UIViewController , UITableViewDataSource, UITable
     var dataSource : Array<[String:Any]> = [[String:Any]]()
     var tbView:UITableView!
     var photoSource = [SKPhoto]()
-    let url = "http://192.168.0.156:8888/book/list"
+    var url = "http://192.168.0.156:8888/book/list"
     var curPage = 0
     let pageSize = 20
     var isRequestingMore = false
@@ -25,7 +25,13 @@ class ZiRanListViewController: UIViewController , UITableViewDataSource, UITable
         super.viewDidLoad()
         self.title = "Ziran List";
         
+        let value = UserDefaults.standard.value(forKey: "UDKey_BASEIP")
+        if value != nil {
+            url = "http://\(value!):8888/book/list"
+        }
+        
         tbView = UITableView(frame: view.bounds, style: .grouped)
+        tbView.rowHeight = 50
         view.addSubview(tbView)
         tbView.dataSource = self
         tbView.delegate = self
@@ -86,7 +92,7 @@ class ZiRanListViewController: UIViewController , UITableViewDataSource, UITable
         let CellId = "ZiranCellId"
         var cell = tableView.dequeueReusableCell(withIdentifier: CellId)
         if cell == nil {
-            cell = UITableViewCell(style: .value1, reuseIdentifier: CellId)
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: CellId)
         }
         
         let dic = dataSource[indexPath.row]

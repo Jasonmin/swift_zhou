@@ -20,6 +20,7 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         dataSource.append(["ziran":"自然风光"])
         dataSource.append(["browser":"图片浏览"])
+        dataSource.append(["config":"数据配置"])
         
         let tbView = UITableView(frame: view.bounds, style: .grouped)
         view.addSubview(tbView)
@@ -90,6 +91,13 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         if key == "ziran" {
             let vc = ZiRanListViewController()
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        if key == "config" {
+            let vc = ConfigViewController()
+            vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
         }
     }

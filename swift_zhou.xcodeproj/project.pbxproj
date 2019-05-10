@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		519D866D12F5A28286620BC7 /* Pods_swift_zhou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */; };
 		CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */; };
+		CF9AC6C2228568CD000F00D3 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */; };
 		CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56B2283C13600A375BB /* AppDelegate.m */; };
 		CFF7A56F2283C13600A375BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56E2283C13600A375BB /* ViewController.m */; };
 		CFF7A5722283C13600A375BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5702283C13600A375BB /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.release.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.release.xcconfig"; sourceTree = "<group>"; };
 		10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_zhou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiRanListViewController.swift; sourceTree = "<group>"; };
+		CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		CFF7A5672283C13600A375BB /* swift_zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_zhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A56A2283C13600A375BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFF7A56B2283C13600A375BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF7A589228423EF00A375BB /* MeViewController.swift */,
+				CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				CFF7A58A228423EF00A375BB /* MeViewController.swift in Sources */,
 				CFF7A56F2283C13600A375BB /* ViewController.m in Sources */,
+				CF9AC6C2228568CD000F00D3 /* ConfigViewController.swift in Sources */,
 				CFF7A57A2283C13800A375BB /* main.m in Sources */,
 				CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */,
 				CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */,
