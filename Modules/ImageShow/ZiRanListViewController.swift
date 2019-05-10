@@ -20,6 +20,7 @@ class ZiRanListViewController: UIViewController , UITableViewDataSource, UITable
     let pageSize = 20
     var isRequestingMore = false
     var isAllDataLoaded = false
+    // search
     
     override func viewDidLoad() {
         super.viewDidLoad()
