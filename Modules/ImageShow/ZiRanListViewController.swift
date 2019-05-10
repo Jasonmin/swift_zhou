@@ -15,34 +15,66 @@ class ZiRanListViewController: UIViewController , UITableViewDataSource, UITable
     var dataSource : Array<[String:Any]> = [[String:Any]]()
     var tbView:UITableView!
     var photoSource = [SKPhoto]()
+    let url = "http://192.168.0.156:8888/book/list"
+    var curPage = 0
+    let pageSize = 20
+    var isRequestingMore = false
+    var isAllDataLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Ziran List";
-        
         
         tbView = UITableView(frame: view.bounds, style: .grouped)
         view.addSubview(tbView)
         tbView.dataSource = self
         tbView.delegate = self
         
-        request_imgs()
+        request_imgs(firstPage: true)
     }
     
-    func request_imgs() -> Void {
-        let param = ["pageIdx":"0","pageSize":"300"]
-        Alamofire.request("http://192.168.0.156:8888/book/list", method: .get, parameters: param).responseJSON { (response) in
+    func request_imgs(firstPage:Bool) -> Void {
+        if firstPage == false {
+            curPage+=1
+            isRequestingMore = true
+        } else {
+            self.isAllDataLoaded = false;
+            isRequestingMore = false
+            curPage = 0
+        }
+        let param = ["pageIdx":"\(curPage)","pageSize":"\(pageSize)"]
+        Alamofire.request(url, method: .get, parameters: param).responseJSON { (response) in
             if response.result.isSuccess {
+                
+                self.isRequestingMore = false
+                
                 if let items = response.result.value as? Array<Any> {
+                    
+                    if items.count < self.pageSize {
+                        self.isAllDataLoaded = true;
+                    }
+                    
+                    if self.curPage == 0 {
+                        self.dataSource.removeAll()
+                    }
+                    
                     for dict in items {
-//                        print(dict)
                         self.dataSource.append(dict as! [String : Any])
                     }
                 }
                 self.handlePhotoSource()
                 self.tbView.reloadData()
             }
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if  isAllDataLoaded == false &&
+            isRequestingMore == false &&
+            (offsetY + scrollView.frame.size.height) > scrollView.contentSize.height &&
+            scrollView.contentSize.height > scrollView.frame.size.height {
+            request_imgs(firstPage: false)
         }
     }
     
