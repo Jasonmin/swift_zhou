@@ -2,7 +2,10 @@
 platform :ios, '8.0'
 
 def all_Pods
+use_frameworks!
+
    pod 'CTMediator', '~> 25'
+   pod 'SKPhotoBrowser', '~> 6.1.0'
 end
 
 targetsArray = ['swift_zhou']
