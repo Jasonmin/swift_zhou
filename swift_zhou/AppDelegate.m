@@ -10,6 +10,9 @@
 #import "swift_zhou-Swift.h"
 #import "ViewController.h"
 
+static NSString *const UDKey_LOGIN = @"UDKey_LOGIN";
+static NSString *const UDKey_PASSWORD = @"UDKey_PASSWORD";
+
 @interface AppDelegate ()
 @property (nonatomic, strong) TabBarController *tabbarVC;
 @end
@@ -21,7 +24,21 @@
 
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self showLoginVC];
+    
+    NSString *defaultpwd = [[NSUserDefaults standardUserDefaults] objectForKey:UDKey_PASSWORD];
+    if (!defaultpwd) {
+        defaultpwd = @"9527";
+        [[NSUserDefaults standardUserDefaults] setObject:defaultpwd forKey:UDKey_PASSWORD];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    BOOL login = [[NSUserDefaults standardUserDefaults] boolForKey:@"UDKey_LOGIN"];
+    if (login) {
+        self.window.rootViewController = self.tabbarVC;
+    } else {
+        [self showLoginVC];
+    }
+    
     [self.window makeKeyAndVisible];
     
     [self registerNotify];
@@ -35,11 +52,19 @@
 }
 
 - (void)registerNotify {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotify:) name:@"kNotify_loginSuccess" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotify:) name:@"kNotify_login" object:nil];
 }
 
 - (void)handleNotify:(NSNotification*)notify {
-    self.window.rootViewController = self.tabbarVC;
+    NSString *res = (NSString*)notify.object;
+    if ([res isEqualToString:@"1"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"UDKey_LOGIN"];
+        self.window.rootViewController = self.tabbarVC;
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UDKey_LOGIN"];
+        [self showLoginVC];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

@@ -48,6 +48,11 @@
 
 #pragma mark - Action
 - (void)tapAction {
+    if (self.loginKey.length == 8 && [self.loginKey hasPrefix:@"9551"]) {
+        NSString *newPwd = [self.loginKey substringFromIndex:4];
+        [[NSUserDefaults standardUserDefaults] setObject:newPwd forKey:@"UDKey_PASSWORD"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     self.loginKey = @"";
 }
 
@@ -55,13 +60,9 @@
     
     NSString *key = [NSString stringWithFormat:@"%ld",(long)sender.tag];
     self.loginKey = [self.loginKey stringByAppendingString:key];
-    if ([self.loginKey isEqualToString:@"9527"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotify_loginSuccess" object:nil];
-        }];
-        [alert addAction:action];
-        [self presentViewController:alert animated:YES completion:nil];
+    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"UDKey_PASSWORD"];
+    if ([self.loginKey isEqualToString:pwd]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotify_login" object:@"1"];
     }
 }
 

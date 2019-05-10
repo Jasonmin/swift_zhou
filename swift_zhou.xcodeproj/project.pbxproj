@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9874FC0AF03161919A6329CE /* libPods-swift_zhou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */; };
+		519D866D12F5A28286620BC7 /* Pods_swift_zhou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */; };
+		CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */; };
 		CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56B2283C13600A375BB /* AppDelegate.m */; };
 		CFF7A56F2283C13600A375BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56E2283C13600A375BB /* ViewController.m */; };
 		CFF7A5722283C13600A375BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5702283C13600A375BB /* Main.storyboard */; };
@@ -21,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.release.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.release.xcconfig"; sourceTree = "<group>"; };
-		C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swift_zhou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_zhou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiRanListViewController.swift; sourceTree = "<group>"; };
 		CFF7A5672283C13600A375BB /* swift_zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_zhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A56A2283C13600A375BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFF7A56B2283C13600A375BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9874FC0AF03161919A6329CE /* libPods-swift_zhou.a in Frameworks */,
+				519D866D12F5A28286620BC7 /* Pods_swift_zhou.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +65,17 @@
 		BB5E98C216341F7E81B0D85A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C25F8ED2D896C75CD60B1674 /* libPods-swift_zhou.a */,
+				10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF9AC6BE228546B7000F00D3 /* ImageShow */ = {
+			isa = PBXGroup;
+			children = (
+				CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */,
+			);
+			path = ImageShow;
 			sourceTree = "<group>";
 		};
 		CFF7A55E2283C13600A375BB = {
@@ -107,6 +117,7 @@
 		CFF7A5812283CBC200A375BB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF9AC6BE228546B7000F00D3 /* ImageShow */,
 				CFF7A5822283CBD600A375BB /* Home */,
 				CFF7A588228423E000A375BB /* Me */,
 				CFF7A5862284235900A375BB /* TabBarController.swift */,
@@ -141,6 +152,7 @@
 				CFF7A5632283C13600A375BB /* Sources */,
 				CFF7A5642283C13600A375BB /* Frameworks */,
 				CFF7A5652283C13600A375BB /* Resources */,
+				B4BC42F6FA2E2A2CD0C727D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +232,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B4BC42F6FA2E2A2CD0C727D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift_zhou/Pods-swift_zhou-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift_zhou/Pods-swift_zhou-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -231,6 +267,7 @@
 				CFF7A56F2283C13600A375BB /* ViewController.m in Sources */,
 				CFF7A57A2283C13800A375BB /* main.m in Sources */,
 				CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */,
+				CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */,
 				CFF7A5872284235900A375BB /* TabBarController.swift in Sources */,
 				CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */,
 			);
