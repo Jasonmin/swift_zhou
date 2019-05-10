@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (4.8.2)
   - CTMediator (25)
   - SKPhotoBrowser (6.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
   - CTMediator (~> 25)
   - SKPhotoBrowser (~> 6.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - CTMediator
     - SKPhotoBrowser
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
 
-PODFILE CHECKSUM: cce95d53e28823f3fd8d4d0d89c7dfaefa20f797
+PODFILE CHECKSUM: 3afb4342762598e68de4be7d343a8196ca47e669
 
 COCOAPODS: 1.6.1

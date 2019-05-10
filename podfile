@@ -6,6 +6,9 @@ use_frameworks!
 
    pod 'CTMediator', '~> 25'
    pod 'SKPhotoBrowser', '~> 6.1.0'
+   pod 'Alamofire', '~> 4.8.2'
+   
+      
 end
 
 targetsArray = ['swift_zhou']
