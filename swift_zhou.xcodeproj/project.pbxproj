@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		519D866D12F5A28286620BC7 /* Pods_swift_zhou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */; };
+		CF3F493322895D6300492C6E /* TouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F493222895D6300492C6E /* TouchIDViewController.swift */; };
 		CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */; };
 		CF9AC6C2228568CD000F00D3 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */; };
 		CF9AC6C422857588000F00D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6C322857588000F00D3 /* SearchViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0D1DD3599006A96BA69E7A96 /* Pods-swift_zhou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_zhou.release.xcconfig"; path = "Target Support Files/Pods-swift_zhou/Pods-swift_zhou.release.xcconfig"; sourceTree = "<group>"; };
 		10287A1A1EDCED7A60658CFA /* Pods_swift_zhou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_zhou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3F493222895D6300492C6E /* TouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
 		CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiRanListViewController.swift; sourceTree = "<group>"; };
 		CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		CF9AC6C322857588000F00D3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				CFF7A589228423EF00A375BB /* MeViewController.swift */,
 				CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */,
+				CF3F493222895D6300492C6E /* TouchIDViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */,
 				CFF7A5872284235900A375BB /* TabBarController.swift in Sources */,
 				CFF7A5852283CC1E00A375BB /* HomeViewController.swift in Sources */,
+				CF3F493322895D6300492C6E /* TouchIDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

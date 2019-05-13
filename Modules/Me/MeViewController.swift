@@ -21,6 +21,7 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         dataSource.append(["ziran":"自然风光"])
         dataSource.append(["browser":"图片浏览"])
         dataSource.append(["config":"数据配置"])
+        dataSource.append(["touchid":"指纹验证"])
         
         let tbView = UITableView(frame: view.bounds, style: .grouped)
         view.addSubview(tbView)
@@ -66,40 +67,20 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         let dic = dataSource![indexPath.row];
         let key = dic.keys.first
         
+        var targetVC:UIViewController!
         if key == "browser" {
-            var images = [SKPhoto]()
-            let photo = SKPhoto.photoWithImageURL("http://img.ivsky.com/img/tupian/li/201810/18/xiyang-005.jpg")
-            photo.shouldCachePhotoURLImage = false
-            images.append(photo)
             
-            let photo2 = SKPhoto.photoWithImageURL("http://img.ivsky.com/img/tupian/li/201810/17/zhulin-010.jpg")
-            photo2.shouldCachePhotoURLImage = false
-            images.append(photo2)
-            
-            let photo3 = SKPhoto.photoWithImageURL("http://img.ivsky.com/img/tupian/li/201810/16/senlin_wu-011.jpg")
-            photo3.shouldCachePhotoURLImage = false
-            images.append(photo3)
-            
-            let photo4 = SKPhoto.photoWithImageURL("http://img.ivsky.com/img/tupian/li/201810/16/shamo.jpg")
-            photo4.shouldCachePhotoURLImage = false
-            images.append(photo4)
-            
-            let browser = SKPhotoBrowser(photos: images)
-            browser.initializePageIndex(0)
-            present(browser, animated: true, completion: {})
         }
-        
         if key == "ziran" {
-            let vc = ZiRanListViewController()
-            vc.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(vc, animated: true)
+            targetVC = ZiRanListViewController()
         }
-        
         if key == "config" {
-            let vc = ConfigViewController()
-            vc.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(vc, animated: true)
+            targetVC = ConfigViewController()
         }
+        if key == "touchid" {
+            targetVC = TouchIDViewController()
+        }
+        targetVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(targetVC, animated: true)
     }
-    
 }
