@@ -22,6 +22,7 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         dataSource.append(["browser":"图片浏览"])
         dataSource.append(["config":"数据配置"])
         dataSource.append(["touchid":"指纹验证"])
+        dataSource.append(["webservice":"web服务器"])
         
         let tbView = UITableView(frame: view.bounds, style: .grouped)
         view.addSubview(tbView)
@@ -79,6 +80,9 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         }
         if key == "touchid" {
             targetVC = TouchIDViewController()
+        }
+        if key == "webservice" {
+            targetVC = WebServiceViewController()
         }
         targetVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(targetVC, animated: true)

@@ -34,6 +34,11 @@ class TouchIDViewController: UIViewController {
                 
                 if success {
                     print("指纹验证成功");
+                    DispatchQueue.main.async {
+                        let hud = MBProgressHUD.showAdded(to: self.view, animated: false)
+                        hud.mode = .text
+                        hud.label.text = "指纹验证成功"
+                    }
                 } else {
                     print("指纹验证失败");
                 }
