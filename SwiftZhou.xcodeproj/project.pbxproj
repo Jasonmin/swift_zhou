@@ -34,7 +34,7 @@
 		CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		CF9AC6C322857588000F00D3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CFC5BDCB228E4DCC003A187E /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		CFF7A5672283C13600A375BB /* swift_zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_zhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF7A5672283C13600A375BB /* SwiftZhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftZhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A56A2283C13600A375BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFF7A56B2283C13600A375BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CFF7A56D2283C13600A375BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		CFF7A5682283C13600A375BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFF7A5672283C13600A375BB /* swift_zhou.app */,
+				CFF7A5672283C13600A375BB /* SwiftZhou.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFF7A5662283C13600A375BB /* swift_zhou */ = {
+		CFF7A5662283C13600A375BB /* SwiftZhou */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFF7A57D2283C13800A375BB /* Build configuration list for PBXNativeTarget "swift_zhou" */;
+			buildConfigurationList = CFF7A57D2283C13800A375BB /* Build configuration list for PBXNativeTarget "SwiftZhou" */;
 			buildPhases = (
 				63436C3F0C9F2A54BD5396FC /* [CP] Check Pods Manifest.lock */,
 				CFF7A5632283C13600A375BB /* Sources */,
@@ -173,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = swift_zhou;
+			name = SwiftZhou;
 			productName = swift_zhou;
-			productReference = CFF7A5672283C13600A375BB /* swift_zhou.app */;
+			productReference = CFF7A5672283C13600A375BB /* SwiftZhou.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CFF7A5622283C13600A375BB /* Build configuration list for PBXProject "swift_zhou" */;
+			buildConfigurationList = CFF7A5622283C13600A375BB /* Build configuration list for PBXProject "SwiftZhou" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFF7A5662283C13600A375BB /* swift_zhou */,
+				CFF7A5662283C13600A375BB /* SwiftZhou */,
 			);
 		};
 /* End PBXProject section */
@@ -483,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CFF7A5622283C13600A375BB /* Build configuration list for PBXProject "swift_zhou" */ = {
+		CFF7A5622283C13600A375BB /* Build configuration list for PBXProject "SwiftZhou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFF7A57B2283C13800A375BB /* Debug */,
@@ -492,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFF7A57D2283C13800A375BB /* Build configuration list for PBXNativeTarget "swift_zhou" */ = {
+		CFF7A57D2283C13800A375BB /* Build configuration list for PBXNativeTarget "SwiftZhou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFF7A57E2283C13800A375BB /* Debug */,

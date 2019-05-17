@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "swift_zhou-Swift.h"
+#import "SwiftZhou-Swift.h"
 #import "ViewController.h"
 
 static NSString *const UDKey_LOGIN = @"UDKey_LOGIN";

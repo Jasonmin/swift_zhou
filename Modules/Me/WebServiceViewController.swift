@@ -14,11 +14,11 @@ class WebServiceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
     }
     
     func methodA() {
         
-//        let localServer =
     }
     
 }

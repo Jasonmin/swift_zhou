@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "swift_zhou-Swift.h"
+#import "SwiftZhou-Swift.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSString *loginKey;
