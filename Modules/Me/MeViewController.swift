@@ -19,10 +19,10 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         self.title = "我";
         
         dataSource.append(["ziran":"自然风光"])
-        dataSource.append(["browser":"图片浏览"])
         dataSource.append(["config":"数据配置"])
         dataSource.append(["touchid":"指纹验证"])
         dataSource.append(["webservice":"web服务器"])
+        dataSource.append(["Chart":"图表"])
         
         let tbView = UITableView(frame: view.bounds, style: .grouped)
         view.addSubview(tbView)
@@ -69,20 +69,21 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         let key = dic.keys.first
         
         var targetVC:UIViewController!
-        if key == "browser" {
-            
-        }
-        if key == "ziran" {
+        switch key {
+        case "ziran":
             targetVC = ZiRanListViewController()
-        }
-        if key == "config" {
+        case "config":
             targetVC = ConfigViewController()
-        }
-        if key == "touchid" {
+        case "touchid":
             targetVC = TouchIDViewController()
-        }
-        if key == "webservice" {
+        case "webservice":
             targetVC = WebServiceViewController()
+        default:
+            let projectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String
+            let claString = "\(projectName!).\(String(describing: key!))ViewController"
+            let cla = NSClassFromString(claString) as! UIViewController.Type
+            targetVC = cla.init()
+            break
         }
         targetVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(targetVC, animated: true)

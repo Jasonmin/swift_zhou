@@ -13,6 +13,7 @@
 		CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */; };
 		CF9AC6C2228568CD000F00D3 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */; };
 		CF9AC6C422857588000F00D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AC6C322857588000F00D3 /* SearchViewController.swift */; };
+		CFC5BDCC228E4DCC003A187E /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5BDCB228E4DCC003A187E /* ChartViewController.swift */; };
 		CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56B2283C13600A375BB /* AppDelegate.m */; };
 		CFF7A56F2283C13600A375BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF7A56E2283C13600A375BB /* ViewController.m */; };
 		CFF7A5722283C13600A375BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF7A5702283C13600A375BB /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		CF9AC6BF228546EB000F00D3 /* ZiRanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiRanListViewController.swift; sourceTree = "<group>"; };
 		CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		CF9AC6C322857588000F00D3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CFC5BDCB228E4DCC003A187E /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		CFF7A5672283C13600A375BB /* swift_zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_zhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF7A56A2283C13600A375BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFF7A56B2283C13600A375BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				CF9AC6C1228568CD000F00D3 /* ConfigViewController.swift */,
 				CF3F493222895D6300492C6E /* TouchIDViewController.swift */,
 				CF3F4934228961BE00492C6E /* WebServiceViewController.swift */,
+				CFC5BDCB228E4DCC003A187E /* ChartViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-swift_zhou/Pods-swift_zhou-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 			);
@@ -264,6 +268,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 			);
@@ -284,6 +289,7 @@
 				CF3F4935228961BE00492C6E /* WebServiceViewController.swift in Sources */,
 				CF9AC6C2228568CD000F00D3 /* ConfigViewController.swift in Sources */,
 				CF9AC6C422857588000F00D3 /* SearchViewController.swift in Sources */,
+				CFC5BDCC228E4DCC003A187E /* ChartViewController.swift in Sources */,
 				CFF7A57A2283C13800A375BB /* main.m in Sources */,
 				CFF7A56C2283C13600A375BB /* AppDelegate.m in Sources */,
 				CF9AC6C0228546EB000F00D3 /* ZiRanListViewController.swift in Sources */,
